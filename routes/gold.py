@@ -2,7 +2,7 @@ import requests
 import xmltodict
 from flask import Blueprint, jsonify
 
-bp = Blueprint("gold", __name__)
+bp = Blueprint("gold_bp", __name__)
 
 @bp.route("/gold")
 def gold_price():
