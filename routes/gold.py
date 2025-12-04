@@ -2,9 +2,9 @@ import requests
 import xmltodict
 from flask import Blueprint, jsonify
 
-bp = Blueprint("gold_bp", __name__)
+gold_bp = Blueprint("gold_bp", __name__)
 
-@bp.route("/gold")
+@gold_bp.route("/gold")
 def gold_price():
     url = "http://api.btmc.vn/api/BTMCAPI/getpricebtmc?key=3kd8ub1llcg9t45hnoh8hmn7t5kc2v"
 
