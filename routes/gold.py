@@ -33,4 +33,7 @@ def gold_price():
         output[name] = { "buy": buy, "sell": sell}
    
     # output = json.dumps(output, indent=4, ensure_ascii=False)
-    return jsonify(output)
+    return Response(
+        json.dumps(output, ensure_ascii=False, indent=2), 
+        mimetype='application/json'
+    )
