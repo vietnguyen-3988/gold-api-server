@@ -1,7 +1,7 @@
 import requests
 import xmltodict
 import json
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, Response
 
 gold_bp = Blueprint("gold_bp", __name__)
 
@@ -32,5 +32,7 @@ def gold_price():
         # print(i, name,buy, sell)
         output[name] = { "buy": buy, "sell": sell}
    
-    output = json.dumps(output, indent=4, ensure_ascii=False)
-    return output
+    return Response(
+        json.dumps(output, ensure_ascii=False, indent=2), 
+        mimetype='application/json'
+    )
