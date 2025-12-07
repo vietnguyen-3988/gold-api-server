@@ -1,4 +1,5 @@
 flask
 requests
 xmltodict
+mcp[flask]
 gunicorn
